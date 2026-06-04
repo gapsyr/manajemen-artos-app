@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const { hitungSaldo } = require("../services/saldoService");
 const axios = require("axios");
 const pino = require("pino");
 const makeWASocket = require("@whiskeysockets/baileys").default;
@@ -85,6 +86,21 @@ if (msg.key.fromMe) return;
       msg.message.conversation ||
       msg.message.extendedTextMessage?.text ||
       "";
+if (text.trim() === "!saldo") {
+
+  const data = hitungSaldo();
+
+  await sock.sendMessage(chatId, {
+    text:
+`💰 Saldo Saat Ini
+
+Pemasukan : Rp${data.pemasukan.toLocaleString("id-ID")}
+Pengeluaran : Rp${data.pengeluaran.toLocaleString("id-ID")}
+Saldo : Rp${data.saldo.toLocaleString("id-ID")}`
+  });
+
+  return;
+}
     if (!text.startsWith("!")) return;
 
     const commandText = text.slice(1).trim();
