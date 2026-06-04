@@ -1,3 +1,7 @@
+const {
+  tambahKeSpreadsheet
+} = require("../services/googleSheetsService");
+
 const fs = require("fs");
 const path = require("path");
 
@@ -20,7 +24,7 @@ exports.getTransaksi = (req, res) => {
   res.json(transaksi);
 };
 
-exports.tambahTransaksi = (req, res) => {
+exports.tambahTransaksi = async (req, res) => {
   const transaksi = bacaData();
 
   const { kategori, nominal, tipe } = req.body;
@@ -54,6 +58,8 @@ if (!["masuk", "keluar"].includes(tipe)) {
   transaksi.push(dataBaru);
 
   simpanData(transaksi);
+
+  await tambahKeSpreadsheet(dataBaru);
 
   res.status(201).json({
     message: "Transaksi berhasil ditambahkan",

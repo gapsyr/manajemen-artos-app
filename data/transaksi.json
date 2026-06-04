@@ -12,5 +12,12 @@
     "kategori": "Makan",
     "nominal": 25000,
     "tipe": "keluar"
+  },
+  {
+    "id": 1780554714410,
+    "tanggal": "2026-06-04T06:31:54.410Z",
+    "kategori": "Transport",
+    "nominal": 15000,
+    "tipe": "keluar"
   }
 ]
