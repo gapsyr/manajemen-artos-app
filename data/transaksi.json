@@ -19,5 +19,12 @@
     "kategori": "Transport",
     "nominal": 15000,
     "tipe": "keluar"
+  },
+  {
+    "id": 1780555831086,
+    "tanggal": "2026-06-04T06:50:31.086Z",
+    "kategori": "Tes Key Baru",
+    "nominal": 1000,
+    "tipe": "keluar"
   }
 ]
