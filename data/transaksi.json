@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1780552198338,
+    "tanggal": "2026-06-04T05:49:58.338Z",
+    "kategori": "Gaji",
+    "nominal": 5000000,
+    "tipe": "masuk"
+  },
+  {
+    "id": 1780552802207,
+    "tanggal": "2026-06-04T06:00:02.207Z",
+    "kategori": "Makan",
+    "nominal": 25000,
+    "tipe": "keluar"
+  }
+]
