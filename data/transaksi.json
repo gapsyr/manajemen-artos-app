@@ -26,5 +26,40 @@
     "kategori": "Tes Key Baru",
     "nominal": 1000,
     "tipe": "keluar"
+  },
+  {
+    "id": 1780560500648,
+    "tanggal": "2026-06-04T08:08:20.648Z",
+    "kategori": "makan",
+    "nominal": 25000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780574869037,
+    "tanggal": "2026-06-04T12:07:49.037Z",
+    "kategori": "makan",
+    "nominal": 5000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780574940818,
+    "tanggal": "2026-06-04T12:09:00.818Z",
+    "kategori": "belanja",
+    "nominal": 100000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780575021053,
+    "tanggal": "2026-06-04T12:10:21.053Z",
+    "kategori": "gaji",
+    "nominal": 4200000,
+    "tipe": "masuk"
+  },
+  {
+    "id": 1780575098619,
+    "tanggal": "2026-06-04T12:11:38.619Z",
+    "kategori": "bensin",
+    "nominal": 25000,
+    "tipe": "keluar"
   }
 ]
