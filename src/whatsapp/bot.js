@@ -9,6 +9,8 @@ const {
 } = require("@whiskeysockets/baileys");
 const qrcode = require("qrcode-terminal");
 const { hitungSaldo } = require("../services/saldoService");
+const { ambilRiwayat } = require("../services/riwayatService");
+
 
 async function startBot() {
   const { state, saveCreds } = await useMultiFileAuthState("auth");
@@ -69,6 +71,30 @@ Saldo : Rp${data.saldo.toLocaleString("id-ID")}`
 
       return;
     }
+if (text.trim() === "!riwayat") {
+
+  const riwayat = ambilRiwayat(5);
+
+  if (riwayat.length === 0) {
+    await sock.sendMessage(chatId, {
+      text: "Belum ada transaksi."
+    });
+
+    return;
+  }
+
+  const pesan = riwayat
+    .map((item, index) =>
+      `${index + 1}. ${item.kategori} - Rp${item.nominal.toLocaleString("id-ID")} (${item.tipe})`
+    )
+    .join("\n");
+
+  await sock.sendMessage(chatId, {
+    text: `📋 5 Transaksi Terakhir\n\n${pesan}`
+  });
+
+  return;
+}
 
     const commandText = text.slice(1).trim();
     const parts = commandText.split(" ");

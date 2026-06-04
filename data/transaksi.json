@@ -61,5 +61,33 @@
     "kategori": "bensin",
     "nominal": 25000,
     "tipe": "keluar"
+  },
+  {
+    "id": 1780578772439,
+    "tanggal": "2026-06-04T13:12:52.439Z",
+    "kategori": "jajan",
+    "nominal": 15000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780578795419,
+    "tanggal": "2026-06-04T13:13:15.419Z",
+    "kategori": "healing",
+    "nominal": 700000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780578812353,
+    "tanggal": "2026-06-04T13:13:32.353Z",
+    "kategori": "indomaret",
+    "nominal": 100000,
+    "tipe": "keluar"
+  },
+  {
+    "id": 1780578824010,
+    "tanggal": "2026-06-04T13:13:44.010Z",
+    "kategori": "bakso",
+    "nominal": 100000,
+    "tipe": "keluar"
   }
 ]
