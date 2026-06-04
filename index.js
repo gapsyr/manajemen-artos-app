@@ -1,11 +1,15 @@
+require("dotenv").config();
+
 const express = require("express");
+
+const transaksiRoutes = require("./src/routes/transaksiRoutes");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Manajemen Artos App Berjalan");
-});
+app.use(express.json());
 
-app.listen(3000, () => {
-  console.log("Server berjalan di port 3000");
+app.use("/", transaksiRoutes);
+
+app.listen(process.env.PORT, () => {
+  console.log(`Server berjalan di port ${process.env.PORT}`);
 });
